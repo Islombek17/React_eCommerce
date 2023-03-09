@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&family=Montserrat:wght@300;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #fff;
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.wrapper{
+  width: 1280px;
+  margin: 50px auto;
+}
+
+header{
+  position: relative;
+}
+
+header .logo{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+header ul.nav{
+  float: right;
+  list-style: none;
+}
+
+header ul.nav li{
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: opacity 500ms ease;
+}
+
+header ul.nav li:hover{
+  opacity: 0.5;
+}
+
+header .presentation{
+  margin: 50px 0;
+  background: url('./image/main.jpg') no-repeat;
+  width: 100%;
+  height: 500px;
+  border-radius: 0px 0px 5px 5px;
+  background-size:cover ;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color:#8e8888 ;
+  position: relative;
+}
+
+header .presentation::after{
+  content: "Best stuffs for your home";
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+
+header .presentation::before{
+  content: "Low prices";
+  position: absolute;
+  top: 220px;
+  left: 50px;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+}
+
+header .shop-card-button{
+  float: right;
+  cursor: pointer;
+  transition: color, transform 400ms ease;
+}
+
+header .shop-card-button:hover,
+header .shop-card-button.active{
+  color: #dc3d3d;
+  transform: scale(1.4);
+}
+
+header .shop-card{
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 450px;
+  background: #fafafa;
+  -webkit-box-shadow: 4px 5px 15px -7px #606060; 
+  box-shadow: 4px 5px 15px -7px #606060;
+  z-index: 1000;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+header .shop-card .item{
+width: 100%;
+float: left;
+margin-bottom: 20px;
+}
+
+header .shop-card .item img{
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
+header .shop-card .item h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+header .shop-card .item p{
+  color: #797979;
+  font-weight: 600;
+}
+
+header .shop-card .empty h2{
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+header .shop-card .item .delete-icon{
+color: #ca5252;
+float: right;
+position: relative;
+top: -25px;
+cursor: pointer;
+transition: color, transform 400ms ease;
+}
+
+header .shop-card .item .delete-icon:hover{
+  color: #d83030;
+  transform: scale(1.4);
+}
+
+header .shop-card .summa{
+float: left;
+width: 100%;
+font-weight: 600;
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+footer{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.categories div{
+display: inline-block;
+background: #f2f2f2;
+border-radius: 50px;
+padding: 10px 20px;
+margin-bottom: 25px;
+margin-right: 15px;
+cursor: pointer;
+border: 1px solid transparent;
+transition: all 500ms ease;
+}
+
+.categories div:hover{
+  border-color: silver;
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main .item {
+  width: 30%;
+  margin-bottom: 50px;
+  background: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+main .item img,
+.full-item img{
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+
+main h2, .full-item h2,
+main p, .full-item p,
+main b, .full-item b{
+  margin: 10px 20px;
+  color: #333;
+}
+
+main b,
+.full-item b{
+  color: #0e9407;
+}
+
+main .item img:hover,
+.full-item img:hover{
+  transform: scale(1.03);
+}
+
+main .add-to-card,
+.full-item .add-to-card {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  background: #ca5252;
+  color: #fff;
+  font-weight: 600;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+main .add-to-card:hover,
+.full-item .add-to-card:hover{
+  transform: scale(1.05) translateY(-1px);
+}
+
+.full-item{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0, 0.8);
+  z-index: 9999;
+  overflow: auto;
+}
+
+.full-item > div{
+width: 600px;
+position: relative;
+margin: 10% auto;
+padding: 40px 30px;
+background: #fff;
+border-radius: 9px;
+}
